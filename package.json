@@ -1,0 +1,38 @@
+{
+  "name": "final-app",
+  "version": "1.0.0",
+  "description": "Final App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^31.2.0",
+    "electron-builder": "^24.13.3",
+    "electron-rebuild": "^3.2.9"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pkg": "^5.8.1",
+    "sqlite3": "^5.1.2"
+  },
+  "build": {
+    "appId": "com.example.finalapp",
+    "productName": "Final App",
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "main.js",
+      "preload.js",
+      "index.html",
+      "script.js",
+      "style.css"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "author": "",
+  "license": "ISC"
+}
